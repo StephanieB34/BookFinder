@@ -17,12 +17,12 @@
 
         <main class="main">
         
-        <form action="/action.page">
+        <form id="action.page">
             <fieldset>
                 <div class="container">
                 <h1>"So many books, so little time"-Frank Zappa
                 </h1>
-                <select name="list">
+                <select id="list">
                     <option value="hardcover-fiction">Hardcover Fiction</option>
                     <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
                     <option value="e-book-fiction">E-Book Fiction</option>
@@ -36,7 +36,7 @@
                     <option value="food-and-fitness">Food and Fitness</option>
                 </select>
                 <br><br>
-                <input type="submit">
+                <input type="submit"></input>
                 </div>
             </fieldset>
         </form>
@@ -71,14 +71,11 @@
             </div>
         </section>
         
-        <div id="results" hidden>
-            <div class="results-container">
-                <h2 hidden>Results</h2>
-                <div class="search-results">
-
-                </div>
-            </div>
-        </div>
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <ul id="results-list">
+          </ul>
+        </section>
 
         <div id="details" hidden>
             <div class="details-container">
