@@ -38,7 +38,7 @@
       </fieldset>
     </form>
 
-    <section>
+    <section class="main-section">
       <div class="container">
         <h1>Book Search</h1>
         <p>
@@ -49,7 +49,7 @@
       </div>
     </section>
 
-    <section class="mainSection">
+    <section class="main-section">
       <div class="textBlock">
         <h2>Explore</h2>
         <p style="float: right;"><img src="https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a71104cfd8734bbc0e1d07f0cccd636d&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
@@ -67,11 +67,16 @@
       </div>
     </section>
 
-    <p id="js-error-message" class="error-message"></p>
+    
     <section id="results" class="hidden">
-      <ul id="results-list">
-      </ul>
+        <div class="results-container">
+            <ul id="results-list">
+                <button type="button" id="buy-button">Buy</button>
+                <button type="button" id="detail-button">Details</button>
+            </ul>   
+        </div>
     </section>
+    
 
     <div id="details" hidden>
       <div class="details-container">

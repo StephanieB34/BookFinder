@@ -11,7 +11,15 @@ $(document).ready(function() {
   $(".details").hide();
 });
 
+$('.nav-link-list').on("click", function (event) {
+  event.preventDefault();
+  $("#list-form").show();
+  $(".results").hide();
+  $(".main-section").show();
+})
+
 $("#list-form").submit(function(event) {
+
   event.preventDefault();
   let selectedList = $("#list").val();
   getDataFromAPI(selectedList);
@@ -44,11 +52,10 @@ function formatQueryParams(params) {
 }
 
 function displayResults(responseJson) {
-  console.log(responseJson);
-
+  console.log(responseJson)
   $("#list-form").hide();
+  $('.main-section').hide();
   $("#results").show();
-  $("#list-form").hide();
   for (let i = 0; i < responseJson.results.length; i++) {
     $("#results-list").append(
       `<li>
@@ -56,10 +63,41 @@ function displayResults(responseJson) {
         <p>${responseJson.results[i].book_details[0].author}</p>
         <p>${responseJson.results[i].isbns[0].isbn13}</p>
       </li>`
-    );
-  }
-
-  $("#results").removeClass("hidden");
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-' + book.rank + '"/> 
+      <h2><a href="' + book.amazon_product_url + '" target="_blank"></a></h2> 
+    )};
 }
 
-function getRequest(term, lists) {}
+$('#buy-button').click(function(event) {
+  event.preventDefault();
+  window.location='http://www.amazon.com';
+  $('.results').show();
+  $('.main-section').hide();
+  $('#list-form').hide();
+});
+
+
+
+/*$('.detail-button').on("click", function (event) {
+  event.preventDefault();
+  $('#details').show();
+  $('.results').hide();
+  $('.main-section').hide();
+  $('#list-form').hide();
+});
+
+function displayDetails (responseJson) {
+  console.log(responseJson)
+  $('#list-form').hide();
+  $('.main-section').hide();
+  $('#results').hide();
+  $('#details').show();
+  for (let i = 0; i < responseJson.results.length; i++) {
+    $("#results-list").append(
+      `<li>
+      <h3>${responseJson.results[i].book_details[0].description}</h3>
+      </li>`
+    )};
+}
+*/
+

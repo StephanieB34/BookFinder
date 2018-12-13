@@ -57,7 +57,7 @@ fieldset{
 
 
 
-section {
+.main-section {
   background-color: whitesmoke;
   text-align: center;
   font: bold;
@@ -87,4 +87,18 @@ section {
   
 }
 
+.results-list {
+  text-align: center;
+  color: white;
+  font: bold;
+
+}
+
+.results-textBlock {
+  display: inline-block;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: center;
+}
 
