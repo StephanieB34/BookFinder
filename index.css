@@ -102,3 +102,30 @@ fieldset{
   text-align: center;
 }
 
+/*@media only screen and (min-width: 320px){
+  .textBlock {
+    display: block;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 650px){
+  .textBlock {
+    display: block;
+    width: 650 px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .feedback {
+    width: 100%;
+    font-size: 18px;
+
+  }
+  
+}*/

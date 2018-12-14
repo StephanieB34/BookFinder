@@ -10,12 +10,12 @@ $(document).ready(function() {
   $(".results").hide();
   $(".details").hide();
 });
-
+//doesn't show list again after going back
 $('.nav-link-list').on("click", function (event) {
   event.preventDefault();
   $("#list-form").show();
-  $(".results").hide();
-  $(".main-section").show();
+  $('.results-container').hide();
+  $('.main-section').show();
 })
 
 $("#list-form").submit(function(event) {
@@ -62,24 +62,24 @@ function displayResults(responseJson) {
         <h3>${responseJson.results[i].book_details[0].title}</h3>
         <p>${responseJson.results[i].book_details[0].author}</p>
         <p>${responseJson.results[i].isbns[0].isbn13}</p>
+        '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-'+ '">'
       </li>`
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-' + book.rank + '"/> 
-      <h2><a href="' + book.amazon_product_url + '" target="_blank"></a></h2> 
     )};
 }
 
 $('#buy-button').click(function(event) {
   event.preventDefault();
   window.location='http://www.amazon.com';
-  $('.results').show();
+  $('.results-container').show();
   $('.main-section').hide();
   $('#list-form').hide();
 });
 
 
 
-/*$('.detail-button').on("click", function (event) {
+$('.detail-button').on("click", function (event) {
   event.preventDefault();
+  //$('.details').removeClass(hidden);
   $('#details').show();
   $('.results').hide();
   $('.main-section').hide();
@@ -99,5 +99,5 @@ function displayDetails (responseJson) {
       </li>`
     )};
 }
-*/
+
 
