@@ -1,4 +1,4 @@
-* body{
+* body {
   box-sizing: border-box;
 }
 
@@ -6,17 +6,17 @@ nav {
   background-color: whitesmoke;
 }
 
-.navigation{
+.navigation {
   position: fixed;
   top: 0px;
   width: 100%;
   height: 30px;
-  
+
   border-bottom: 1px solid black;
 }
 .nav-link-list {
   float: right;
-  color:black;
+  color: black;
   margin: 0 10px;
 }
 
@@ -32,17 +32,16 @@ header {
   margin-bottom: 30px;
   font-size: 25px;
 }
-form{
+form {
   text-align: center;
   background-image: url("https://images.unsplash.com/photo-1517770413964-df8ca61194a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a2a753a335178a63b40af45ed76f78f&auto=format&fit=crop&w=1050&q=80");
   height: 500px;
   width: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
-fieldset{
+fieldset {
   background-color: white;
   height: 200px;
   width: 400px;
@@ -51,11 +50,8 @@ fieldset{
   margin-right: 400px;
   padding-left: 40px;
   padding-right: 40px;
-  display: inline-block
-  
+  display: inline-block;
 }
-
-
 
 .main-section {
   background-color: whitesmoke;
@@ -72,7 +68,6 @@ fieldset{
   display: inline-block;
   box-sizing: border-box;
   font-size: 18px;
-  
 }
 
 .footer {
@@ -84,14 +79,12 @@ fieldset{
   background-color: black;
   color: white;
   text-align: center;
-  
 }
 
 .results-list {
   text-align: center;
   color: white;
   font: bold;
-
 }
 
 .results-textBlock {
@@ -102,6 +95,13 @@ fieldset{
   text-align: center;
 }
 
+#details-page {
+  margin-top: 50px;
+}
+
+.book-cover {
+  height: 50px;
+}
 /*@media only screen and (min-width: 320px){
   .textBlock {
     display: block;
@@ -127,5 +127,5 @@ fieldset{
     font-size: 18px;
 
   }
-  
+
 }*/

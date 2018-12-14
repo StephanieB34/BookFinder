@@ -7,23 +7,51 @@ var searchURL = "https://api.nytimes.com/svc/books/v3/lists.json";
 
 //---loading page- hide results and details page
 $(document).ready(function() {
-  $(".results").hide();
-  $(".details").hide();
+  //
 });
+
 //doesn't show list again after going back
-$('.nav-link-list').on("click", function (event) {
+$(".nav-link-list").on("click", function(event) {
   event.preventDefault();
-  $("#list-form").show();
-  $('.results-container').hide();
-  $('.main-section').show();
-})
+  showLandingPage();
+});
 
 $("#list-form").submit(function(event) {
-
   event.preventDefault();
   let selectedList = $("#list").val();
   getDataFromAPI(selectedList);
+  showResultsPage();
 });
+
+function showLandingPage() {
+  $("#landing-page").show();
+  $("#results-page").hide();
+  $("#details-page").hide();
+}
+function showResultsPage() {
+  $("#landing-page").hide();
+  $("#results-page").show();
+  $("#details-page").hide();
+}
+function showDetailsPage() {
+  $("#landing-page").hide();
+  $("#results-page").hide();
+  $("#details-page").show();
+}
+
+$("#detail-button").on("click", function(event) {
+  event.preventDefault();
+  console.log("details");
+  showDetailsPage();
+});
+
+// $("#buy-button").click(function(event) {
+//   event.preventDefault();
+//   window.location = "http://www.amazon.com";
+//   $(".results-container").show();
+//   $(".main-section").hide();
+//   $("#list-form").hide();
+// });
 
 function getDataFromAPI(selectedList) {
   const params = {
@@ -52,52 +80,32 @@ function formatQueryParams(params) {
 }
 
 function displayResults(responseJson) {
-  console.log(responseJson)
-  $("#list-form").hide();
-  $('.main-section').hide();
-  $("#results").show();
+  $("#results-list").empty();
   for (let i = 0; i < responseJson.results.length; i++) {
+    console.log(responseJson.results[i]);
     $("#results-list").append(
       `<li>
         <h3>${responseJson.results[i].book_details[0].title}</h3>
         <p>${responseJson.results[i].book_details[0].author}</p>
         <p>${responseJson.results[i].isbns[0].isbn13}</p>
-        '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-'+ '">'
+        <a href="${responseJson.results[i].amazon_product_url}">Buy</a>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover">
       </li>`
-    )};
+    );
+  }
 }
 
-$('#buy-button').click(function(event) {
-  event.preventDefault();
-  window.location='http://www.amazon.com';
-  $('.results-container').show();
-  $('.main-section').hide();
-  $('#list-form').hide();
-});
-
-
-
-$('.detail-button').on("click", function (event) {
-  event.preventDefault();
-  //$('.details').removeClass(hidden);
-  $('#details').show();
-  $('.results').hide();
-  $('.main-section').hide();
-  $('#list-form').hide();
-});
-
-function displayDetails (responseJson) {
-  console.log(responseJson)
-  $('#list-form').hide();
-  $('.main-section').hide();
-  $('#results').hide();
-  $('#details').show();
+function displayDetails(responseJson) {
+  console.log(responseJson);
+  $("#list-form").hide();
+  $(".main-section").hide();
+  $("#results").hide();
+  $("#details").show();
   for (let i = 0; i < responseJson.results.length; i++) {
     $("#results-list").append(
       `<li>
       <h3>${responseJson.results[i].book_details[0].description}</h3>
       </li>`
-    )};
+    );
+  }
 }
-
-

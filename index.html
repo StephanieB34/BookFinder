@@ -14,74 +14,76 @@
 
   <main class="main">
 
-    <form id="list-form">
-      <fieldset>
+
+
+    <div id="landing-page">
+      <form id="list-form">
+        <fieldset>
+          <div class="container">
+            <h1>"So many books, so little time"-Frank Zappa</h1>
+            <select id="list">
+              <option class="lists" value="hardcover-fiction">Hardcover Fiction</option>
+              <option class="lists" value="hardcover-nonfiction">Hardcover Nonfiction</option>
+              <option class="lists" value="e-book-fiction">E-Book Fiction</option>
+              <option class="lists" value="e-book-nonfiction">E-Book Nonfiction</option>
+              <option class="lists" value="chapter-books">Chapter Books</option>
+              <option class="lists" value="advice-how-to-and-miscellaneous">Advice How-To and Miscellaneous</option>
+              <option class="lists" value="picture-books">Picture Books</option>
+              <option class="lists" value="young-adult">Young Adult</option>
+              <option class="lists" value="manga">Manga</option>
+              <option class="lists" value="business-books">Business Books</option>
+              <option class="lists" value="food-and-fitness">Food and Fitness</option>
+            </select>
+            <br><br>
+            <input type="submit"></input>
+          </div>
+        </fieldset>
+      </form>
+
+      <section class="main-section">
         <div class="container">
-          <h1>"So many books, so little time"-Frank Zappa
-          </h1>
-          <select id="list">
-            <option class="lists" value="hardcover-fiction">Hardcover Fiction</option>
-            <option class="lists" value="hardcover-nonfiction">Hardcover Nonfiction</option>
-            <option class="lists" value="e-book-fiction">E-Book Fiction</option>
-            <option class="lists" value="e-book-nonfiction">E-Book Nonfiction</option>
-            <option class="lists" value="chapter-books">Chapter Books</option>
-            <option class="lists" value="advice-how-to-and-miscellaneous">Advice How-To and Miscellaneous</option>
-            <option class="lists" value="picture-books">Picture Books</option>
-            <option class="lists" value="young-adult">Young Adult</option>
-            <option class="lists" value="manga">Manga</option>
-            <option class="lists" value="business-books">Business Books</option>
-            <option class="lists" value="food-and-fitness">Food and Fitness</option>
-          </select>
-          <br><br>
-          <input type="submit"></input>
+          <h1>Book Search</h1>
+          <p>
+            Searching for a book is now easy and hassle free with BookFinder. No need to waste precious time searching shelves
+            for a book you may never find. Just choose a list from above and scroll through the Best Sellers for that genre. Find
+            a book to fall in love with.
+          </p>
         </div>
-      </fieldset>
-    </form>
+      </section>
 
-    <section class="main-section">
-      <div class="container">
-        <h1>Book Search</h1>
-        <p>
-          Searching for a book is now easy and hassle free with BookFinder. No need to waste precious time searching shelves
-          for a book you may never find. Just choose a list from above and scroll through the Best Sellers for that genre. Find
-          a book to fall in love with.
-        </p>
-      </div>
-    </section>
-
-    <section class="main-section">
-      <div class="textBlock">
-        <h2>Explore</h2>
-        <p style="float: right;"><img src="https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a71104cfd8734bbc0e1d07f0cccd636d&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
-        <p> Enter into a whole new world by exploring a new book.</p>
-      </div>
-      <div class="textBlock">
-        <h2>Inspire</h2>
-        <p style="float: left;" background-color="lightgrey;"><img src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f69c53990c8beebe8351f97d3c27da61&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
-        <p>Recharge your creative energy by diving into a book from a new genre.</p>
-      </div>
-      <div class="textBlock">
-        <h2>Buy</h2>
-        <p style="float: right;"><img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f91ccb24a2c4048c0de0155e8346dfbc&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
-        <p>No need to wait for your favorite book, buy it today with Amazon.</p>
-      </div>
-    </section>
-
-    
-    <section id="results">
-        <div class="results-container" class="hidden">
-            <header>New York Times Best Sellers 2018</header>
-            <ul id="results-list">
-                <button id="buy-button">Buy</button>
-                <button id="detail-button">Details</button>
-            </ul>   
+      <section class="main-section">
+        <div class="textBlock">
+          <h2>Explore</h2>
+          <p style="float: right;"><img src="https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a71104cfd8734bbc0e1d07f0cccd636d&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
+          <p> Enter into a whole new world by exploring a new book.</p>
         </div>
-    </section>
-    
+        <div class="textBlock">
+          <h2>Inspire</h2>
+          <p style="float: left;" background-color="lightgrey;"><img src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f69c53990c8beebe8351f97d3c27da61&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
+          <p>Recharge your creative energy by diving into a book from a new genre.</p>
+        </div>
+        <div class="textBlock">
+          <h2>Buy</h2>
+          <p style="float: right;"><img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f91ccb24a2c4048c0de0155e8346dfbc&auto=format&fit=crop&w=1050&q=80" height="200px" width="400px"></p>
+          <p>No need to wait for your favorite book, buy it today with Amazon.</p>
+        </div>
+      </section>
+    </div>
 
-    <div id="details" class="hidden">
+
+    <div id="results-page" hidden>
+      <div class="results-container">
+        <header>New York Times Best Sellers 2018</header>
+        <ul id="results-list">
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="details-page" hidden>
       <div class="details-container">
-          <h4>Description</h4>
+        <h4>This is the details page!</h4>
       </div>
     </div>
 
