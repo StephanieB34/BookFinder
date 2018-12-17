@@ -51,6 +51,7 @@ fieldset {
   padding-left: 40px;
   padding-right: 40px;
   display: inline-block;
+  margin-top: 100px;
 }
 
 .main-section {
@@ -81,51 +82,65 @@ fieldset {
   text-align: center;
 }
 
-.results-list {
-  text-align: center;
-  color: white;
-  font: bold;
-}
-
-.results-textBlock {
+ul {
+  list-style: none;
+  font: 18px;
   display: inline-block;
-  padding: 15px;
-  box-sizing: border-box;
-  background-color: white;
-  text-align: center;
+  margin-bottom: 50px;
 }
 
 #details-page {
   margin-top: 50px;
+  background-color: white;
+  text-align: center;
+  font-size: 24px;
 }
 
+#results-list li {
+  margin: 0 0 20px 0;
+}
+
+#results-page {
+  text-align:center;
+  background-color: white;
+  
+}
 .book-cover {
-  height: 50px;
-}
-/*@media only screen and (min-width: 320px){
-  .textBlock {
-    display: block;
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 25px;
-  }
+  height: 200px;
+  width: 150px;
 }
 
-@media only screen and (min-width: 650px){
-  .textBlock {
-    display: block;
-    width: 650 px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.back {
+  margin-top: 80px;
+  border-radius: 10px;
+  height: 40px;
+  width: 60px;
+  background-color: grey;
+  color: black;
+  font: bold;
+  font-size: 18px;
+  margin-bottom: 80px;
+} 
+
+#details-page .book-cover{
+  margin: 0 0 50px 0;
+  height: 300px;
+  width: 200px;
 }
 
-@media only screen and (min-width: 1020px) {
-  .feedback {
+
+
+
+
+@media only screen and (max-width: 375px) {
+  /*for mobile phones*/
+  form {
     width: 100%;
-    font-size: 18px;
-
   }
-
-}*/
+  .textBlock{
+    width: 100%;
+  }
+  .main-section{
+    width:100%;
+  }
+}

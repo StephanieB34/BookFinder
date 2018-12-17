@@ -51,13 +51,6 @@ $("#results-list").on("click", ".details-button", function(event) {
   displayDetails(bookArray[index]);
 });
 
-// $("#buy-button").click(function(event) {
-//   event.preventDefault();
-//   window.location = "http://www.amazon.com";
-//   $(".results-container").show();
-//   $(".main-section").hide();
-//   $("#list-form").hide();
-// });
 
 function getDataFromAPI(selectedList) {
   const params = {
@@ -94,13 +87,12 @@ function displayResults(bookArray) {
   for (let i = 0; i < bookArray.length; i++) {
     $("#results-list").append(
       `<li>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover">
         <h3>${bookArray[i].book_details[0].title}</h3>
         <p>${bookArray[i].book_details[0].author}</p>
-        <p>${bookArray[i].isbns[0].isbn13}</p>
         <a href="${bookArray[i].amazon_product_url}">Buy</a>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover">
         <button data-index="${i}" class="details-button">details</button>
-      </li>`
+       </li>`
     );
   }
 }
@@ -110,9 +102,11 @@ function displayDetails(book) {
   $(".details-container").empty();
   $(".details-container").append(
     `<div>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover">
        <h3>${book.book_details[0].title}</h3>
-       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover">
-
+       <p>${book.book_details[0].description}</p>
+       <p>${book.book_details[0].author}</p>
+       <p>Publisher:${book.book_details[0].publisher}</p>
     </div>`
   );
 }
