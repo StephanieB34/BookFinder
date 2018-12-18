@@ -92,6 +92,7 @@ function displayResults(bookArray) {
         <p>${bookArray[i].book_details[0].author}</p>
         <a href="${bookArray[i].amazon_product_url}">Buy</a>
         <button data-index="${i}" class="details-button">details</button>
+        <div class="clear"></div>
        </li>`
     );
   }

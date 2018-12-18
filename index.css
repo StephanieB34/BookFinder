@@ -108,8 +108,11 @@ ul {
 .book-cover {
   height: 200px;
   width: 150px;
+  float: left;
 }
-
+.clear {
+  clear: both;
+}
 .back {
   margin-top: 80px;
   border-radius: 10px;
@@ -126,11 +129,12 @@ ul {
   margin: 0 0 50px 0;
   height: 300px;
   width: 200px;
+  float: none;
 }
 
-
-
-
+header{
+  text-align: center;
+}
 
 @media screen and (max-width: 375px) {
   /*for mobile phones*/
