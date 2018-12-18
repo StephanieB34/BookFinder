@@ -68,7 +68,6 @@ fieldset {
   background-color: whitesmoke;
   text-align: center;
   font: bold;
-  
   font-size: 18px;
   margin-left: 10%;
   margin-right: 10%;
@@ -182,6 +181,16 @@ ul {
   }
   #details-page .book-cover {
     margin-top: 3%;
+  }
+  .main-section{
+    height: 15%;
+    font-size: 18px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .section{
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
 
