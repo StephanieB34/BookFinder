@@ -12,7 +12,7 @@ main {
 }
 
 nav {
-  background-color: whitesmoke;
+  background-color: rgba(209, 212, 71, 1);
 }
 
 .navigation {
@@ -34,9 +34,14 @@ header {
   text-align: center;
   /*display: block;*/
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
   font-size: 25px;
   padding: 30%;
+  
+}
+
+#list {
+  font-size: 18px;
 }
 form {
   text-align: center;
@@ -65,13 +70,13 @@ fieldset {
 }
 
 .main-section {
-  background-color: whitesmoke;
+  background-color: white;
   text-align: center;
   font: bold;
   font-size: 18px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: none;
+  margin-top: 50px;
   
 }
 
@@ -100,7 +105,7 @@ fieldset {
   right: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color:black;
   color: white;
   text-align: center;
 }
@@ -168,6 +173,14 @@ ul {
   float:none;
 }
 
+.button{
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color:rgba(209, 212, 71, 1);
+  border: none;
+  font-size: 18px;
+}
+
 @media screen and (min-width: 769px) {
   .navigation {
     width: cover;
@@ -178,6 +191,7 @@ ul {
    header{
     margin:none;
     padding: none;
+    margin-bottom: 0;
   }
   #details-page .book-cover {
     margin-top: 3%;
